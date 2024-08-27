@@ -1,0 +1,233 @@
+/* Light Mode Styles (Default) */
+
+
+
+body.light-mode {
+    --modal-background: rgba(255, 255, 255, 1);
+    --modal-content-background: white;
+    --modal-content-color: black;
+    --button-background: #4CAF50; /* Green */
+    --link-color: red;
+    --link-text-shadow: 3px 3px 5px rgba(20, 20, 20, 0.5);
+    --spinner-border-top: #ff0000;
+    
+    
+    
+    --MainBg2: #fff;
+  --Title2: #333;
+  --STitle2: #555;
+  --Cyan2: #0c97a3;
+
+  /* Static colors as variables */
+  --HeaderColor: #333;
+  --NavbarBg: #f9f6ee;
+  --NavbarHoverBg: #f3e5ab;
+  --SecondaryBorder: #222;
+  --SecondaryColor: #222;
+  --SecondaryHoverBorder: #333;
+  --ModalSubBodyBorder: #f2f2f2;
+  --TableBorderBottom: #f2f2f2;
+  --ProgressDivBg: #f2f2f2;
+  --LoadCoverShadow: rgba(0, 0, 0, 0.5);
+  --LineWrapBg: #d2d2d2;
+  --CircleProgressBg: #d2d2d2;
+  
+--primarybg:#444;
+
+--primarybordercl: #222;
+--gcashratepric: #f4f4f4;
+--navactivebg : #f3e5ab;
+--modalsubttle : #555;
+--vaultsvgbg : #0c97a3;
+}
+
+body.dark-mode {
+    --modal-background: rgba(0, 0, 0, 0.9);
+    --modal-content-background: #333;
+    --modal-content-color: white;
+    --button-background: #555; /* Dark gray */
+    --link-color: #5AC8FAFF; /* Orange */
+    --link-text-shadow: 3px 3px 3px rgba(100, 100, 100, 0.8);
+    --spinner-border-top: #ff5722;
+    
+    
+    
+    --MainBg2: #333; /* Dark background for body */
+  --Title2: #e0e0e0;  /* Light text color for titles */
+  --STitle2: #e7e0e0; /* Slightly darker text color for secondary titles */
+  --Cyan2: #1de9b6;   /* Brighter cyan to stand out on dark background */
+
+  /* Static colors as variables */
+  --HeaderColor: #e0e0e0; /* Light color for header text */
+  --NavbarBg: #949494;    /* Dark background for the navbar */
+  --NavbarHoverBg: #333333; /* Slightly lighter background for navbar hover */
+  --SecondaryBorder: #444; /* Darker border color */
+  --SecondaryColor: #e0e0e0; /* Light text color for secondary elements */
+  --SecondaryHoverBorder: #555; /* Lighter border color on hover */
+  --ModalSubBodyBorder: #333; /* Darker border color for modal */
+  --TableBorderBottom: #333; /* Darker border color for table bottoms */
+  --ProgressDivBg: #333; /* Dark background for progress divs */
+  --LoadCoverShadow: rgba(255, 255, 255, 0.5); /* Light shadow for loading cover */
+  --LineWrapBg: #222; /* Dark background for line wraps */
+  --CircleProgressBg: #222; /* Dark background for circle progress */
+  
+  --primarybg:#bbb;
+
+--primarybordercl: #aaa;
+--gcashratepric: #565656;
+--navactivebg : #4994b6;
+--modalsubttle : #ccc;
+--vaultsvgbg : #8134DF;
+}
+
+/* Basic Modal Styling */
+#hiddenIframe {
+    display: none;
+}
+
+.mdal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10000000000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--modal-background); /* Modal background */
+}
+
+/* Fullscreen Modal Styling */
+#fullscreen-modl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--modal-background); /* Modal background */
+    z-index: 10000000000; /* Sit on top */
+}
+
+/* Modal Content Styling */
+.modl-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--modal-content-background); /* Modal content background */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1; /* Start visible */
+    transition: opacity 0.5s ease; /* Fade transition */
+    color: var(--modal-content-color); /* Text color */
+}
+
+/* Button Styling */
+#modl-button {
+    background-color: var(--button-background); /* Button background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+}
+
+/* Link Styling */
+.copy-link {
+    color: var(--link-color); /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem; /* Adjust size as needed */
+    text-shadow: var(--link-text-shadow); /* Link text shadow */
+}
+
+.keep-using-link {
+    color: var(--link-color); /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem; /* Adjust size as needed */
+    text-shadow: var(--link-text-shadow); /* Link text shadow */
+}
+
+/* Loading Spinner Styling */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.spinnerooney {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--spinner-border-top); /* Spinner color */
+    border-radius: 50%;
+    animation: spinneroni 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spinneroni {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Modal Visibility */
+#fullscreen-modl.show {
+    opacity: 1; /* Fade in effect */
+}
+
+#fullscreen-modl.hide {
+    opacity: 0; /* Fade out effect */
+}
+
+/* Styling the scrolling text */
+        #scrollingTxt {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 1.25rem;
+            background-color: black;
+            color: white;
+            white-space: nowrap;
+            overflow: hidden;
+            display: none; /* Initially hidden */
+            z-index: 999999;
+        }
+
+        #scrollingTxt span {
+            display: inline-block;
+ 
+            animation: scrll 10s linear infinite;
+        }
+
+        /* Scrolling animation */
+        @keyframes scrll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+
+
+
+
